@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Header Section -->
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/logo.png" class="logo" alt="Logo" />
+        <ul>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <!-- Mobile toggle icons (optional functionality with JS) -->
+        <i class="fas fa-bars menu-icon" id="menuOpen" onclick="toggleMenu()"></i>
+        <i class="fas fa-times menu-icon" id="menuClose" onclick="toggleMenu()"></i>
+
+      </nav>
+      <div class="header-text">
+        <p>FULL STACK DEVELOPER</p>
+        <h1>Hi, I am <span>Rupasri P</span><br />from Dharmapuri,<br />Tamilnadu</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+   
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/user.png" alt="Profile Picture" />
+        </div>
+        <div class="about-col-2">
+          <h1>About Me</h1>
+          <p>
+            I am a passionate and detail-oriented IT graduate with a strong foundation in programming, web development, and problem-solving. Eager to apply my skills in real-world projects, I am committed to continuous learning and contributing effectively to team success. Proficient in HTML, CSS, JavaScript, and familiar with tools like GitHub and Firebase. Looking forward to starting my career in a dynamic and growth-oriented organization.
+          </p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+            <p class="tab-links" onclick="opentab(event, 'internships')">Internships</p>
+            <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>UI & UX</span><br />Using Figma to design web/app interfaces</li>
+              <li><span>Web Development</span><br />Using HTML, CSS, JavaScript</li>
+              <li><span>Tools/Platforms</span><br />GitHub, VS Code, Firebase</li>
+              <li><span>Programming Languages</span><br />C, Java, Python</li>
+              <li><span>Database</span><br />MySQL (Basics)</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="internships">
+            <ul>
+              <li>
+                <span>LADYBIRD WEB SOLUTION PVT LTD, Dharmapuri</span><br />
+                Front-End Intern <b>(Jan 31 - Mar 1, 2025)</b><br />
+                Worked on frontend development using HTML, Bootstrap, JavaScript, and React; collaborated with a team on a mini-project.
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li>
+                <span>Bachelor of Engineering in Computer Science</span><br />
+                Government College of Engineering, Dharmapuri, 2022 - 2026<br />
+                CGPA: 7.7/10
+              </li>
+              <li>
+                <span>Senior Secondary (XII), State Board</span><br />
+                Government Girls Higher Secondary School, Palacodu, 2021 - 2022<br />
+                Percentage: 68.74%
+              </li>
+              <li>
+                <span>Secondary (X), State Board</span><br />
+                Palacodu, 2019 - 2020<br />
+                Percentage: 85.4%
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>Front-End</h2>
+          <p>
+            I am a frontend developer passionate about building user-friendly and visually appealing websites using HTML, CSS, JavaScript, and Bootstrap. I enjoy transforming UI/UX designs into responsive interfaces and using tools like Figma and GitHub.
+          </p>
+          <a href="javascript:void(0)">Learn more</a>
+        </div>
+        <div>
+          <i class="fa-brands fa-figma"></i>
+          <h2>UI & UX Design</h2>
+          <p>
+            I'm a budding UI/UX designer skilled in Figma, focused on creating clean, user-friendly web and app interfaces. I enjoy designing intuitive layouts that enhance user experience.
+          </p>
+          <a href="javascript:void(0)">Learn more</a>
+        </div>
+        <div>
+          <i class="fa-brands fa-stack-overflow"></i>
+          <h2>Full Stack</h2>
+          <p>
+            I'm a full stack developer with knowledge in both frontend and backend technologies. Skilled in HTML, CSS, JavaScript, and familiar with tools like GitHub, Firebase, and MySQL. I enjoy building complete web applications.
+          </p>
+          <a href="javascript:void(0)">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Section -->
+  <div id="portfolio">
+    <div class="container">
+      <h1 class="sub-title">My Work</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="images/port.jpg" alt="Portfolio Website" />
+          <div class="layer">
+            <h3>Portfolio Website</h3>
+            <p>Developed a personal website using HTML, CSS, and JavaScript to showcase my projects and resume. Hosted on GitHub Pages.</p>
+            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/ecom.webp" alt="E-Commerce Website" />
+          <div class="layer">
+            <h3>E-Commerce Website</h3>
+            <p>
+              Developed a responsive E-commerce website for showcasing and selling products online. Includes product listings, filters, cart, and checkout. Built using HTML, CSS, JavaScript, and Firebase.
+            </p>
+            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-solid fa-paper-plane"></i> rupasripvnr@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i> +91 8072957097</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <a href="images/RESUME 1.pdf" download class="btn btn2">Download CV</a>
+        </div>
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required />
+            <input type="email" name="Email" placeholder="Your Email" required />
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="copyright">
+    <p>Copyright © Rupasri. Made with <i class="fa-solid fa-heart"></i> by Rupasri</p>
+  </div>
+
+  <!-- Script for Tabs -->
+  <script>
+    function opentab(event, tabname) {
+      const tablinks = document.getElementsByClassName("tab-links");
+      const tabcontents = document.getElementsByClassName("tab-contents");
+
+      for (let link of tablinks) {
+        link.classList.remove("active-link");
+      }
+      for (let content of tabcontents) {
+        content.classList.remove("active-tab");
+      }
+
+      document.getElementById(tabname).classList.add("active-tab");
+      event.currentTarget.classList.add("active-link");
+    }
+  </script>
+  
+  <!-- Script for Menu Toggle -->
+  <script>
+    function toggleMenu() {
+      const navList = document.getElementById("navList");
+      const menuOpen = document.getElementById("menuOpen");
+      const menuClose = document.getElementById("menuClose");
+
+      // Toggle the visibility of the navigation list
+      navList.classList.toggle("active");
+
+      // Check if the menu is open or closed
+      const isOpen = navList.classList.contains("active");
+
+      // Toggle the visibility of the open/close icons
+      menuOpen.style.display = isOpen ? "none" : "block";
+      menuClose.style.display = isOpen ? "block" : "none";
+    }
+
+    // Optional: Close the menu when a link is clicked (for better UX)
+    const navLinks = document.querySelectorAll("#navList a");
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        // Close the menu when any link is clicked
+        document.getElementById("navList").classList.remove("active");
+        document.getElementById("menuOpen").style.display = "block";
+        document.getElementById("menuClose").style.display = "none";
+      });
+    });
+    
+  </script>
+  
+  
+</body>
+</html>
